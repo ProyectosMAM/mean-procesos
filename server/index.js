@@ -12,7 +12,7 @@ app.use(cors({origin: 'http://localhost:4200'}));
 app.use(express.json());
 
 // Routes
-app.use('/api/employees', require('./routes/employee.routes'));
+app.use('/api/procesos', require('./routes/proceso.routes'));
 
 // starting the server
 app.listen(app.get('port'), () => {

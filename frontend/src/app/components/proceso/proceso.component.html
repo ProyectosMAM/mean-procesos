@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <div class="card-content">
+          <form #procesoForm="ngForm" (ngSubmit)="addProceso(procesoForm)">
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="procesoService.selectedProceso._id">
+            <div class="row">
+              <div class="input-field col-s12">
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="procesoService.selectedProceso.name" placeholder="Introduce el nombre del proceso.">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="position" #name="ngModel" [(ngModel)]="procesoService.selectedProceso.position" placeholder="Introduce descripción.">
+              </div>
+              <div class="input-field col-s12">
+                <input type="text" name="office" #name="ngModel" [(ngModel)]="procesoService.selectedProceso.office" placeholder="Introduce dato.">
+              </div>
+              <div class="input-field col-s12">
+                <!-- <input type="text" name="salary" #name="ngModel" [(ngModel)]="procesoService.selectedProceso.salary" value="0" placeholder="Introduce tiempo estandar."> -->
+                <input type="text" name="salary" #name="ngModel" [(ngModel)]="procesoService.selectedProceso.salary" placeholder="Introduce tiempo estandar.">
+              </div>
+              <div class="card-action">
+                <div class="input-field col-s12">
+                  <button class="btn right" style="margin-left: 2px;" (click)="resetForm(procesoForm)">Limpiar</button>
+                  <button class="btn right">Grabar</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col s7">
+      <table class="striped highlight black-text">
+        <thead>
+          <th>Proceso</th>
+          <th>Descripción</th>
+          <th>Dato</th>
+          <th>Estandar</th>
+          <!-- <th>Operations</th> -->
+        </thead>
+        <tbody>
+          <tr *ngFor="let proceso of procesoService.procesos">
+            <td>{{ proceso.name }}</td>
+            <td>{{ proceso.position }}</td>
+            <td>{{ proceso.office }}</td>
+            <td>{{ proceso.salary }}</td>
+            <td>
+              <a (click)="editProceso(proceso)">
+                <i class="material-icons">edit</i>
+              </a>
+              <a (click)="deleteProceso(proceso._id, procesoForm)">
+                <i class="material-icons">delete</i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

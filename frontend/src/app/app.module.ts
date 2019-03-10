@@ -5,12 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Components
 import { AppComponent } from './app.component';
-import { EmployeeComponent } from './components/employee/employee.component';
+import { ProcesoComponent } from './components/proceso/proceso.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    ProcesoComponent
   ],
   imports: [
     BrowserModule,
