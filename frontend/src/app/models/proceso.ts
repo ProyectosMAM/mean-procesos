@@ -1,4 +1,6 @@
 export class Proceso {
+// TODO: Crear campos adecuados.
+// FIXME: Solo para probar los colores.
 
     constructor(_id = '', name = '', position = '', office = '', salary = 0) {
         this._id = _id;

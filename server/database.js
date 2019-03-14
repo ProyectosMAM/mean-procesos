@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 // const URI = 'mongodb://localhost/mean-crud';
+// TODO: Conexion a MongoDB
 const URI = 'mongodb://139.59.152.136:27017/procesos';
 
 mongoose.connect(URI)

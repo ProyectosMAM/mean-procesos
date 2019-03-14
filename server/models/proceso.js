@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+// TODO: Crear Schema adecuado.
 const procesoSchema = new Schema({
     name: { type: String, required: true},
     position: { type: String, required: true },

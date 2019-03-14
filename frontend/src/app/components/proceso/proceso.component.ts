@@ -21,8 +21,8 @@ export class ProcesoComponent implements OnInit {
   }
 
   addProceso(form?: NgForm) {
-    console.log(form.value);
-    if(form.value._id) {
+    console.log('Se ha pulsado grabar ' + form.value);
+    if (form.value._id) {
       this.procesoService.putProceso(form.value)
         .subscribe(res => {
           this.resetForm(form);
@@ -37,7 +37,6 @@ export class ProcesoComponent implements OnInit {
         M.toast({html: 'Guardado correctamente.'});
       });
     }
-    
   }
 
   getProcesos() {
