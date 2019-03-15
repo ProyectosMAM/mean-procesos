@@ -1,3 +1,5 @@
+
+<!-- Tabla con todos los procesos -->
 <div class="container">
   <div class="row col-12">
     <table class="table table-striped">
@@ -21,21 +23,48 @@
             <a (click)="deleteProceso(proceso._id, procesoForm)">
               <i class="material-icons">delete</i>
             </a>
+            <!-- <a (click)="viewProceso(proceso._id, procesoForm)"> -->
+              <i class="material-icons">description</i>
+              <a routerLink="/detalles">
+                <img class="img" src="assets/img/263-network-1.svg" />
+              </a>
+            <!-- </a> -->
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 
+  <!-- Añadir. -->
+  <div class="container">
+      <div class="row justify-content-end">
+          <div class="col-2">
+            <button
+            class="btn btn-outline-primary"
+            (click)="resetForm(procesoForm)"
+          >Añadir
+          <a routerLink="/addedit">
+            <img class="img" src="assets/img/263-network-1.svg" />
+          </a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  <!-- Card para introducir datos. -->
   <div class="row card col-6">
+  
     <div class="card-body">
-      <form #procesoForm="ngForm" (ngSubmit)="addProceso(procesoForm)">
+      <form #procesoForm="ngForm" >
+          <!-- <form #procesoForm="ngForm" (ngSubmit)="addProceso(procesoForm)"> -->
+
         <input
           type="hidden"
           name="_id"
           #_id="ngModel"
           [(ngModel)]="procesoService.selectedProceso._id"
         />
+          <div>
         <div class="row d-flex flex-column ">
           <div class="">
             <input
@@ -66,7 +95,7 @@
           </div>
           <div class="row d-flex flex-column">
             <input
-              type="text"
+              type="number"
               name="salary"
               #name="ngModel"
               [(ngModel)]="procesoService.selectedProceso.salary"
@@ -74,17 +103,21 @@
             />
           </div>
         </div>
+</div>
 
+        <!-- Botones. -->
         <div class="row">
           <div class="">
             <button
               class="btn btn-outline-primary"
-              style="margin-right: 6px;"
+              style="margin-right: 16px;"
               (click)="resetForm(procesoForm)"
-            >
-              Limpiar
+            >Limpiar
             </button>
-            <button class="btn btn-outline-danger">Grabar</button>
+            <button 
+            class="btn btn-outline-danger"
+            (click) = "addProceso(procesoForm)"
+            >Grabar</button>
           </div>
         </div>
       </form>

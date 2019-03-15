@@ -4,7 +4,11 @@ import { ProcesoService } from '../../services/proceso.service';
 import { NgForm } from '@angular/forms';
 import { Proceso } from '../../models/proceso';
 
+// TODO: Solucionar problema con SweetAlert.
+// import Swal from 'sweetalert2';
+
 declare var M: any;
+// const Swal: any = require('sweetalert2');
 
 @Component({
   selector: 'app-proceso',
@@ -27,14 +31,28 @@ export class ProcesoComponent implements OnInit {
         .subscribe(res => {
           this.resetForm(form);
           this.getProcesos();
-          M.toast({html: 'Actualización correcta.'});
+          // M.toast({html: 'Actualización correcta.'});
+          // Swal.fire({
+          //   position: 'top-end',
+          //   type: 'success',
+          //   title: 'Actualización correcta.',
+          //   showConfirmButton: false,
+          //   timer: 1500
+          // });
         });
     } else {
       this.procesoService.postProceso(form.value)
       .subscribe(res => {
         this.getProcesos();
         this.resetForm(form);
-        M.toast({html: 'Guardado correctamente.'});
+        // M.toast({html: 'Guardado correctamente.'});
+        // Swal.fire({
+        //   position: 'top-end',
+        //   type: 'success',
+        //   title: 'Guardado correctamente.',
+        //   showConfirmButton: false,
+        //   timer: 1500
+        // });
       });
     }
   }
@@ -51,20 +69,34 @@ export class ProcesoComponent implements OnInit {
   }
 
   deleteProceso(_id: string, form: NgForm) {
-    if(confirm('¿Estas seguro de que quierez boorar este proceso?')) {
+    if (confirm('¿Estas seguro de que quieres borrar este proceso?')) {
       this.procesoService.deleteProceso(_id)
         .subscribe(res => {
           this.getProcesos();
           this.resetForm(form);
-          M.toast({html: 'Borrado correcto.'});
+          // M.toast({html: 'Borrado correcto.'});
+          // Swal.fire({
+          //   position: 'top-end',
+          //   type: 'success',
+          //   title: 'El proceso ha sido borrado',
+          //   showConfirmButton: false,
+          //   timer: 1500
+          // });
         });
     }
+  }
+
+  viewProceso(proceso: Proceso) {
+    console.log('viewProceso');
+    this.procesoService.selectedProceso = proceso;
+    
   }
 
   resetForm(form?: NgForm) {
     if (form) {
       form.reset();
       this.procesoService.selectedProceso = new Proceso();
+      this.getProcesos();
     }
   }
 

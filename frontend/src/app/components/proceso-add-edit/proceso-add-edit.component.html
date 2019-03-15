@@ -1,0 +1,89 @@
+
+<div class="container">
+<h1>Añadir o editar proceso</h1>
+
+<!-- Botones. -->
+<div class="row">
+  <div class="">
+    <button class="btn btn-outline-primary" style="margin-right: 16px;">
+      Inicio
+      <a routerLink="/home">
+        <img class="img" src="assets/img/263-network-1.svg" />
+      </a>
+    </button>
+  </div>
+</div>
+
+<!-- Card para introducir datos. -->
+<div class="row card col-6">
+  
+  <div class="card-body">
+    <form #procesoForm="ngForm" >
+        <!-- <form #procesoForm="ngForm" (ngSubmit)="addProceso(procesoForm)"> -->
+
+      <input
+        type="hidden"
+        name="_id"
+        #_id="ngModel"
+        [(ngModel)]="procesoService.selectedProceso._id"
+      />
+        <div>
+      <div class="row d-flex flex-column ">
+        <div class="">
+          <input
+            type="text"
+            name="name"
+            #name="ngModel"
+            [(ngModel)]="procesoService.selectedProceso.name"
+            placeholder="Introduce el nombre del proceso."
+          />
+        </div>
+        <div class="row d-flex flex-column">
+          <input
+            type="text"
+            name="position"
+            #name="ngModel"
+            [(ngModel)]="procesoService.selectedProceso.position"
+            placeholder="Introduce descripción."
+          />
+        </div>
+        <div class="row d-flex flex-column">
+          <input
+            type="text"
+            name="office"
+            #name="ngModel"
+            [(ngModel)]="procesoService.selectedProceso.office"
+            placeholder="Introduce dato."
+          />
+        </div>
+        <div class="row d-flex flex-column">
+          <input
+            type="number"
+            name="salary"
+            #name="ngModel"
+            [(ngModel)]="procesoService.selectedProceso.salary"
+            placeholder="Introduce tiempo estandar."
+          />
+        </div>
+      </div>
+</div>
+
+  <!-- Botones. -->
+  <div class="row">
+    <div class="">
+      <button
+        class="btn btn-outline-primary"
+        style="margin-right: 16px;"
+        (click)="resetForm(procesoForm)"
+      >Limpiar
+      </button>
+      <button 
+      class="btn btn-outline-danger"
+      (click) = "addProceso(procesoForm)"
+      >Grabar</button>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+</div>
