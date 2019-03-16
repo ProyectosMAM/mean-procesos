@@ -1,5 +1,37 @@
 <!-- Tabla con todos los procesos -->
 <div class="container">
+<!-- Botones. -->
+<div class="container">
+    <div class="row">
+      <div class="">
+        <button class="btn btn-outline-danger" [routerLink]="['/linea1']" style="margin-right: 16px;">
+          Linea 1
+        </button>
+        <button class="btn btn-outline-primary" style="margin-right: 16px;">
+          Linea 2
+        </button>
+        <button class="btn btn-outline-secondary" style="margin-right: 16px;">
+          Linea 7
+        </button>
+        <button class="btn btn-outline-success" style="margin-right: 16px;">
+          IMAR
+        </button>
+        <button class="btn btn-outline-warning" style="margin-right: 16px;">
+          ULMA
+        </button>
+        <button class="btn btn-outline-secondary" style="margin-right: 16px;">
+            Obrador
+          </button>
+          <button class="btn btn-outline-success" style="margin-right: 16px;">
+            Bodega
+          </button>
+          <button class="btn btn-outline-warning" style="margin-right: 16px;">
+            Almacen
+          </button>
+      </div>
+    </div>
+  </div>
+
   <div class="row col-12">
     <table class="table table-striped">
       <thead>
@@ -31,22 +63,6 @@
     </table>
   </div>
 
-  <!-- Añadir. -->
-  <!-- <div class="container">
-    <div class="row justify-content-end">
-      <div class="col-2">
-        <button
-          class="btn btn-outline-primary"
-          (click)="resetForm(procesoForm)"
-        >
-          Añadir
-          <a routerLink="/addedit">
-            <img class="img" src="assets/img/263-network-1.svg" />
-          </a>
-        </button>
-      </div>
-    </div>
-  </div> -->
   <!-- Añadir. -->
   <div class="container">
     <div class="row justify-content-end">

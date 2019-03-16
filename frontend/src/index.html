@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <title>Procesos LA</title>
@@ -7,6 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
   <!-- MATERIALIZE CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <!-- MATERIAL ICONS CDN -->
@@ -17,9 +18,31 @@
    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" 
    crossorigin="anonymous">
 
+   <nav style="background-color: coral ">
+      <div class="row">
+        <div class="col-1">
+          <i class="material-icons" style="margin-left: 16px">edit</i>
+        </div>
+        <div class="col-11">
+          <h1 style="margin-left: 16px">Procesos en LA.</h1>
+        </div>
+        <!-- <div class="col-sm">
+              One of three columns
+            </div> -->
+      </div>
+    </nav>
+
+<div class="container">
+  <div>
+    <img class="center"
+      style="margin-top: 30px; margin-bottom: 30px"
+      src="../assets/img/NoPodemosMejorar.JPG"
+      alt="Procesos" />
+  </div>
+</div>
+
 </head>
 <body>
-  <app-root></app-root>
   <!-- MATERIALIZE JAVASCRIPT CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
@@ -34,6 +57,39 @@ crossorigin="anonymous"></script>
 integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" 
 crossorigin="anonymous"></script>
 
-
+<div class="container">
+    <!-- Botones. -->
+    <div class="container">
+        <div class="row center">
+          <div class="">
+            <button class="btn btn-outline-danger" [routerLink]="['/linea1']" style="margin-right: 16px;">
+              Linea 1
+            </button>
+            <button class="btn btn-outline-primary" style="margin-right: 16px;">
+              Linea 2
+            </button>
+            <button class="btn btn-outline-secondary" style="margin-right: 16px;">
+              Linea 7
+            </button>
+            <button class="btn btn-outline-success" style="margin-right: 16px;">
+              IMAR
+            </button>
+            <button class="btn btn-outline-warning" style="margin-right: 16px;">
+              ULMA
+            </button>
+            <button class="btn btn-outline-secondary" style="margin-right: 16px;">
+                Obrador
+              </button>
+              <button class="btn btn-outline-success" style="margin-right: 16px;">
+                Bodega
+              </button>
+              <button class="btn btn-outline-warning" style="margin-right: 16px;">
+                Almacen
+              </button>
+          </div>
+        </div>
+      </div>
+      <app-root></app-root>
 </body>
+
 </html>
