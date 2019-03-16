@@ -1,4 +1,3 @@
-
 <!-- Tabla con todos los procesos -->
 <div class="container">
   <div class="row col-12">
@@ -23,12 +22,9 @@
             <a (click)="deleteProceso(proceso._id, procesoForm)">
               <i class="material-icons">delete</i>
             </a>
-            <!-- <a (click)="viewProceso(proceso._id, procesoForm)"> -->
+            <a routerLink="/detalles">
               <i class="material-icons">description</i>
-              <a routerLink="/detalles">
-                <img class="img" src="assets/img/263-network-1.svg" />
-              </a>
-            <!-- </a> -->
+            </a>
           </td>
         </tr>
       </tbody>
@@ -36,27 +32,37 @@
   </div>
 
   <!-- Añadir. -->
-  <div class="container">
-      <div class="row justify-content-end">
-          <div class="col-2">
-            <button
-            class="btn btn-outline-primary"
-            (click)="resetForm(procesoForm)"
-          >Añadir
+  <!-- <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-2">
+        <button
+          class="btn btn-outline-primary"
+          (click)="resetForm(procesoForm)"
+        >
+          Añadir
           <a routerLink="/addedit">
             <img class="img" src="assets/img/263-network-1.svg" />
           </a>
-          </button>
-        </div>
+        </button>
       </div>
     </div>
+  </div> -->
+  <!-- Añadir. -->
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-2">
+          <button class="btn btn-outline-primary"  [routerLink]="['/addedit']" style="margin-right: 16px;">
+              Añadir
+            </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Card para introducir datos. -->
   <div class="row card col-6">
-  
     <div class="card-body">
-      <form #procesoForm="ngForm" >
-          <!-- <form #procesoForm="ngForm" (ngSubmit)="addProceso(procesoForm)"> -->
+      <form #procesoForm="ngForm">
+        <!-- <form #procesoForm="ngForm" (ngSubmit)="addProceso(procesoForm)"> -->
 
         <input
           type="hidden"
@@ -64,46 +70,46 @@
           #_id="ngModel"
           [(ngModel)]="procesoService.selectedProceso._id"
         />
-          <div>
-        <div class="row d-flex flex-column ">
-          <div class="">
-            <input
-              type="text"
-              name="name"
-              #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.name"
-              placeholder="Introduce el nombre del proceso."
-            />
-          </div>
-          <div class="row d-flex flex-column">
-            <input
-              type="text"
-              name="position"
-              #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.position"
-              placeholder="Introduce descripción."
-            />
-          </div>
-          <div class="row d-flex flex-column">
-            <input
-              type="text"
-              name="office"
-              #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.office"
-              placeholder="Introduce dato."
-            />
-          </div>
-          <div class="row d-flex flex-column">
-            <input
-              type="number"
-              name="salary"
-              #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.salary"
-              placeholder="Introduce tiempo estandar."
-            />
+        <div>
+          <div class="row d-flex flex-column ">
+            <div class="">
+              <input
+                type="text"
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.name"
+                placeholder="Introduce el nombre del proceso."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="text"
+                name="position"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.position"
+                placeholder="Introduce descripción."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="text"
+                name="office"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.office"
+                placeholder="Introduce dato."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="number"
+                name="salary"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.salary"
+                placeholder="Introduce tiempo estandar."
+              />
+            </div>
           </div>
         </div>
-</div>
 
         <!-- Botones. -->
         <div class="row">
@@ -112,12 +118,15 @@
               class="btn btn-outline-primary"
               style="margin-right: 16px;"
               (click)="resetForm(procesoForm)"
-            >Limpiar
+            >
+              Limpiar
             </button>
-            <button 
-            class="btn btn-outline-danger"
-            (click) = "addProceso(procesoForm)"
-            >Grabar</button>
+            <button
+              class="btn btn-outline-danger"
+              (click)="addProceso(procesoForm)"
+            >
+              Grabar
+            </button>
           </div>
         </div>
       </form>
