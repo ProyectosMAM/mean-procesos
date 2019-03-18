@@ -8,7 +8,7 @@ import { Proceso } from '../models/proceso';
 })
 export class ProcesoService {
   static getProcesos(): any {
-    throw new Error("Method not implemented.");
+    throw new Error('Method not implemented.');
   }
 
   selectedProceso: Proceso;

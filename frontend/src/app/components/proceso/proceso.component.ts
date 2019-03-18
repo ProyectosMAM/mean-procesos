@@ -89,7 +89,6 @@ export class ProcesoComponent implements OnInit {
   viewProceso(proceso: Proceso) {
     console.log('viewProceso');
     this.procesoService.selectedProceso = proceso;
-    
   }
 
   resetForm(form?: NgForm) {
