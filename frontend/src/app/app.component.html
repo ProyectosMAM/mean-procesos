@@ -1,13 +1,28 @@
 <div class="container">
-  <div>
-    <img
-      class="center"
-      style="margin-top: 30px; margin-bottom: 30px"
-      src="../assets/img/PodemosMejorar.jpg"
-      alt="Procesos"
-    />
+  <img
+    class="center"
+    style="margin-top: 30px; margin-bottom: 30px"
+    src="../assets/img/PodemosMejorar.jpg"
+    alt="Procesos"
+  />
+
+  <!-- Botones. -->
+  <div class="row justify-content-center">
+    <button
+      class="btn btn-outline-primary"
+      [routerLink]="['/inicio']"
+      style="margin-right: 16px;"
+    >
+      Listado
+    </button>
+    <button
+      class="btn btn-success"
+      [routerLink]="['/home']"
+      style="margin-right: 16px;"
+    >
+      Inicio
+    </button>
   </div>
 </div>
 
 <router-outlet></router-outlet>
-

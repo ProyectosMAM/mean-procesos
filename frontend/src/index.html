@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+
     <!-- MATERIALIZE CSS CDN -->
     <link
       rel="stylesheet"
@@ -33,26 +34,46 @@
           <!-- TODO: Cambiar por icono LA. -->
           <i class="material-icons" style="margin-left: 16px">edit</i>
         </div>
-        <div class="col-11">
+        <div class="col-9">
           <h1 style="margin-left: 16px">Procesos en LA.</h1>
         </div>
+        <div class="col-2">
+          <button
+            class="btn btn-outline-primary"
+            [routerLink]="['/inicio']"
+            style="margin-right: 16px;"
+          >
+            Listado
+          </button>
+          <button
+            class="btn btn-success"
+            [routerLink]="['/home']"
+            style="margin-right: 16px;"
+          >
+            Inicio
+          </button>
+        </div>
+
         <!-- <div class="col-sm">
               One of three columns
             </div> -->
       </div>
     </nav>
   </head>
-  <body>
-    
-    <!-- MATERIALIZE JAVASCRIPT CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-    <!-- BootStrap-->
+  <body>
+    <!-- MATERIALIZE JAVASCRIPT CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"
+    ></script>
+
+    <!-- jQuery-->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Bootstrap-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
       integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -63,8 +84,7 @@
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
-    
-    <app-root></app-root>
 
+    <app-root></app-root>
   </body>
 </html>
