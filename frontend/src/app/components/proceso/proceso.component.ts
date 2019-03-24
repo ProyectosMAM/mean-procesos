@@ -25,8 +25,8 @@ export class ProcesoComponent implements OnInit {
   }
 
   addProceso(form?: NgForm) {
-    console.log('Se ha pulsado grabar ' + form.value);
     if (form.value._id) {
+      console.log('Se ha pulsado grabar con ID ' + form.value._id);
       this.procesoService.putProceso(form.value)
         .subscribe(res => {
           this.resetForm(form);
@@ -41,19 +41,20 @@ export class ProcesoComponent implements OnInit {
           // });
         });
     } else {
+      console.log('Se ha pulsado grabar sin ID');
       this.procesoService.postProceso(form.value)
-      .subscribe(res => {
-        this.getProcesos();
-        this.resetForm(form);
-        // M.toast({html: 'Guardado correctamente.'});
-        // Swal.fire({
-        //   position: 'top-end',
-        //   type: 'success',
-        //   title: 'Guardado correctamente.',
-        //   showConfirmButton: false,
-        //   timer: 1500
-        // });
-      });
+        .subscribe(res => {
+          this.resetForm(form);
+          this.getProcesos();
+      // M.toast({html: 'Guardado correctamente.'});
+      // Swal.fire({
+      //   position: 'top-end',
+      //   type: 'success',
+      //   title: 'Guardado correctamente.',
+      //   showConfirmButton: false,
+      //   timer: 1500
+      // });
+    });
     }
   }
 

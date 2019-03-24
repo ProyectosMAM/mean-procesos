@@ -7,20 +7,20 @@ import { Proceso } from '../models/proceso';
   providedIn: 'root'
 })
 export class ProcesoService {
-  static getProcesos(): any {
-    throw new Error('Method not implemented.');
-  }
-
-  selectedProceso: Proceso;
+   selectedProceso: Proceso;
   procesos: Proceso[];
+   readonly URL_API = 'http://localhost:3000/api/procesos';
 
-  readonly URL_API = 'http://localhost:3000/api/procesos';
+  static getProcesos(): any {
+    throw new Error('Método no implementado.');
+  }
 
   constructor(private http: HttpClient) {
     this.selectedProceso = new Proceso();
   }
 
   postProceso(proceso: Proceso) {
+    console.log('postProceso');
     return this.http.post(this.URL_API, proceso);
   }
 

@@ -8,12 +8,12 @@ const procesoSchema = new Schema({
     office: { type: String, required: true },
     salary: { type: Number, required: true},
 
-    nombre: { type: String, required: true},
-    descripcion: { type: String, required: true},
-    propietario: { type: String, required: true},
-    timepoEstandar: { type: Number, required: true},
-    timepoMejor: { type: Number, required: true},
-    timepoPeor: { type: Number, required: true},
+    // nombre: { type: String, required: true},
+    // descripcion: { type: String, required: true},
+    // propietario: { type: String, required: true},
+    // timepoEstandar: { type: Number, required: true},
+    // timepoMejor: { type: Number, required: true},
+    // timepoPeor: { type: Number, required: true},
 
 });
 
