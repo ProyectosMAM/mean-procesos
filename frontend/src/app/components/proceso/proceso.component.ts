@@ -26,7 +26,7 @@ export class ProcesoComponent implements OnInit {
 
   addProceso(form?: NgForm) {
     if (form.value._id) {
-      console.log('Se ha pulsado grabar con ID ' + form.value._id);
+      console.log('Se ha pulsado grabar con ID. Para editar.' + form.value._id);
       this.procesoService.putProceso(form.value)
         .subscribe(res => {
           this.resetForm(form);
@@ -41,7 +41,7 @@ export class ProcesoComponent implements OnInit {
           // });
         });
     } else {
-      console.log('Se ha pulsado grabar sin ID');
+      console.log('Se ha pulsado grabar sin ID. Para añadir.');
       this.procesoService.postProceso(form.value)
         .subscribe(res => {
           this.resetForm(form);

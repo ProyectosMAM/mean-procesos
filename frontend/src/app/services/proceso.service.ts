@@ -1,3 +1,5 @@
+// Comienza la explicación en el minuto 18:30 del video.
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,9 +9,9 @@ import { Proceso } from '../models/proceso';
   providedIn: 'root'
 })
 export class ProcesoService {
-   selectedProceso: Proceso;
+  selectedProceso: Proceso;
   procesos: Proceso[];
-   readonly URL_API = 'http://localhost:3000/api/procesos';
+  readonly URL_API = 'http://localhost:3000/api/procesos';
 
   static getProcesos(): any {
     throw new Error('Método no implementado.');

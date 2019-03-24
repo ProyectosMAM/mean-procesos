@@ -1,11 +1,13 @@
-
-<!-- Tabla con todos los procesos -->
 <div class="container">
-<!-- Botones. -->
-<div class="container">
+  <!-- Botones Linea 1, Linea 2... -->
+  <div class="container">
     <div class="row">
       <div class="">
-        <button class="btn btn-outline-danger" [routerLink]="['/linea1']" style="margin-right: 16px;">
+        <button
+          class="btn btn-outline-danger"
+          [routerLink]="['/linea1']"
+          style="margin-right: 16px;"
+        >
           Linea 1
         </button>
         <button class="btn btn-outline-primary" style="margin-right: 16px;">
@@ -21,18 +23,19 @@
           ULMA
         </button>
         <button class="btn btn-outline-secondary" style="margin-right: 16px;">
-            Obrador
-          </button>
-          <button class="btn btn-outline-success" style="margin-right: 16px;">
-            Bodega
-          </button>
-          <button class="btn btn-outline-warning" style="margin-right: 16px;">
-            Almacen
-          </button>
+          Obrador
+        </button>
+        <button class="btn btn-outline-success" style="margin-right: 16px;">
+          Bodega
+        </button>
+        <button class="btn btn-outline-warning" style="margin-right: 16px;">
+          Almacen
+        </button>
       </div>
     </div>
   </div>
 
+  <!-- Tabla de datos. -->
   <div class="row col-12">
     <table class="table table-striped">
       <thead>
@@ -40,7 +43,6 @@
         <th>Descripción</th>
         <th>Dato</th>
         <th>Estandar</th>
-        <!-- <th>Operations</th> -->
       </thead>
       <tbody>
         <!-- TODO: Aviso: Identifier 'procesoService' refers to a private member of the component -->
@@ -66,78 +68,77 @@
   </div>
 
   <!-- Card para introducir datos. -->
-<div class="row card col-6">
-  
-  <div class="card-body">
-    <form #procesoForm="ngForm" >
-        <form #procesoForm="ngForm" (ngSubmit)="addProceso(procesoForm)">
-
-      <input
-        type="hidden"
-        name="_id"
-        #_id="ngModel"
-        [(ngModel)]="procesoService.selectedProceso._id"
-      />
+  <div class="row card col-6">
+    <div class="card-body">
+      <form #procesoForm="ngForm">
+        <input
+          type="hidden"
+          name="_id"
+          #_id="ngModel"
+          [(ngModel)]="procesoService.selectedProceso._id"
+        />
         <div>
-      <div class="row d-flex flex-column ">
-        <div class="">
-          <input
-            type="text"
-            name="name"
-            #name="ngModel"
-            [(ngModel)]="procesoService.selectedProceso.name"
-            placeholder="Introduce el nombre del proceso."
-          />
+          <div class="row d-flex flex-column ">
+            <div class="">
+              <input
+                type="text"
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.name"
+                placeholder="Introduce el nombre del proceso."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="text"
+                name="position"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.position"
+                placeholder="   Introduce descripción."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="text"
+                name="office"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.office"
+                placeholder="    Introduce dato."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="number"
+                name="salary"
+                #name="ngModel"
+                [(ngModel)]="procesoService.selectedProceso.salary"
+                placeholder="Introduce tiempo estandar."
+              />
+            </div>
+          </div>
         </div>
-        <div class="row d-flex flex-column">
-          <input
-            type="text"
-            name="position"
-            #name="ngModel"
-            [(ngModel)]="procesoService.selectedProceso.position"
-            placeholder="Introduce descripción."
-          />
-        </div>
-        <div class="row d-flex flex-column">
-          <input
-            type="text"
-            name="office"
-            #name="ngModel"
-            [(ngModel)]="procesoService.selectedProceso.office"
-            placeholder="Introduce dato."
-          />
-        </div>
-        <div class="row d-flex flex-column">
-          <input
-            type="number"
-            name="salary"
-            #name="ngModel"
-            [(ngModel)]="procesoService.selectedProceso.salary"
-            placeholder="Introduce tiempo estandar."
-          />
-        </div>
-      </div>
-</div>
+      </form>
+    </div>
+  </div>
 
- <!-- Botones. -->
- <div class="row">
+  <!-- Botones Limpiar, Grabar. -->
+  <div class="row">
     <div class="">
       <button
         class="btn btn-outline-primary"
         style="margin-right: 16px;"
         (click)="resetForm(procesoForm)"
-      >Limpiar
+      >
+        Limpiar
       </button>
       <button 
-      class="btn btn-outline-danger"
-      (click) = "addProceso(procesoForm)"
-      >Grabar</button>
+        class="btn btn-outline-danger"
+        (click)="addProceso(procesoForm)"
+      >
+        Grabar
+      </button>
     </div>
   </div>
-
-
-
-
 
   <!-- Añadir. -->
   <!-- <div class="container">
@@ -149,7 +150,5 @@
       </div>
     </div>
   </div>
-
   -->
-  
-  
+</div>
