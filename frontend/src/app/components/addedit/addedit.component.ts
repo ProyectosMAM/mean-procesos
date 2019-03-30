@@ -6,9 +6,6 @@ import { Proceso } from '../../models/proceso';
 
 import Swal from 'sweetalert2';
 
-// declare var M: any;
-// const Swal: any = require('sweetalert2');
-
 @Component({
   selector: 'app-addedit',
   templateUrl: './addedit.component.html',
@@ -16,7 +13,6 @@ import Swal from 'sweetalert2';
   providers: [ ProcesoService ]
 })
 export class AddeditComponent implements OnInit {
-
   constructor(private procesoService: ProcesoService) { }
 
   ngOnInit() {
@@ -30,7 +26,7 @@ export class AddeditComponent implements OnInit {
         .subscribe(res => {
           this.resetForm(form);
           this.getProcesos();
-          // M.toast({html: 'Actualización correcta.'});
+
           Swal.fire({
             position: 'top-end',
             type: 'success',
@@ -45,8 +41,8 @@ export class AddeditComponent implements OnInit {
         .subscribe(res => {
           this.resetForm(form);
           this.getProcesos();
-      // M.toast({html: 'Guardado correctamente.'});
-      Swal.fire({
+
+          Swal.fire({
         position: 'top-end',
         type: 'success',
         title: 'Guardado correctamente.',
