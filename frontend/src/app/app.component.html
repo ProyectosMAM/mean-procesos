@@ -1,31 +1,10 @@
-<!-- TODO: Cambiar por icono LA. -->
-<!-- <nav style="background-color: coral ">
-  <div class="row">
-    <div class="col-1">
-      <i class="material-icons" style="margin-left: 16px">edit</i>
-    </div>
-    <div class="col-9">
-      <h1 style="margin-left: 16px">Procesos en LA.</h1>
-    </div>
-    <div class="col-2">
-      <button
-        class="btn btn-outline-primary"
-        [routerLink]="['inicio']"
-        style="margin-right: 16px;"
-      >
-        Listado
-      </button>
-      <button
-        class="btn btn-success"
-        [routerLink]="['home']"
-        style="margin-right: 16px;"
-      >
-        Inicio
-      </button>
-    </div>
-
-    
+<app-navbar></app-navbar>
+  <div class="col-lg-10 center">
+    <img id="img"
+      src="../assets/img/PodemosMejorar.jpg"
+      alt="Procesos"
+    />
   </div>
-</nav> -->
-
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+  
+<app-footer></app-footer>

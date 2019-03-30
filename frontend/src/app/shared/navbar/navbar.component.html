@@ -1,0 +1,37 @@
+<div id="content" class="container col-lg-10">
+  <header id="header">
+    <div class="row">
+      <div class="col-1">
+        <img id="logoLA" src="../assets/img/LogoLA.png" alt="LA" />
+      </div>
+      <div class="col-9">
+        <h1>
+          {{ title }}
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <nav id="nav">
+    <ul>
+      <li>
+        <a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a>
+      </li>
+      <li>
+        <a [routerLink]="['/maestro']" [routerLinkActive]="['activado']"
+          >Maestro</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/addedit']" [routerLinkActive]="['activado']"
+          >Crear/editar</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/ficha']" [routerLinkActive]="['activado']"
+          >Ficha</a
+        >
+      </li>
+    </ul>
+  </nav>
+</div>

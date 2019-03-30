@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public title = 'Procesos en LA';
+  // public header_color: string;
+
+
+  constructor() {
+    }
 
 }

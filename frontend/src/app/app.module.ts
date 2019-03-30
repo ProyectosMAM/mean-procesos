@@ -10,18 +10,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProcesoComponent } from './components/proceso/proceso.component';
 import { ProcesoDetallesComponent } from './components/proceso-detalles/proceso-detalles.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
 import { ProcesoAddEditComponent } from './components/proceso-add-edit/proceso-add-edit.component';
-import { ProcesosLinea1Component } from './components/procesos-linea1/procesos-linea1.component';
+import { MaestroComponent } from './components/maestro/maestro.component';
 import { TablaProcesosComponent } from './shared/tabla-procesos/tabla-procesos.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProcesoComponent,
     ProcesoDetallesComponent,
+    DetalleComponent,
+    MaestroComponent,
     ProcesoAddEditComponent,
-    ProcesosLinea1Component,
-    TablaProcesosComponent
+    TablaProcesosComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

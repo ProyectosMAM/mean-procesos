@@ -4,16 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ProcesoComponent } from './components/proceso/proceso.component';
-import { ProcesoDetallesComponent } from './components/proceso-detalles/proceso-detalles.component';
-import { ProcesoAddEditComponent } from './components/proceso-add-edit/proceso-add-edit.component';
-import { ProcesosLinea1Component } from './components/procesos-linea1/procesos-linea1.component';
+import { MaestroComponent } from './components/maestro/maestro.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
 
 const app_routes: Routes = [
     { path: 'home', component: AppComponent, pathMatch: 'full'},
-    { path: 'inicio', component: ProcesoComponent },
-    { path: 'detalles', component: ProcesoDetallesComponent },
-    { path: 'addedit', component: ProcesoAddEditComponent },
-    { path: 'linea1', component: ProcesosLinea1Component },
+    { path: 'maestro', component: MaestroComponent },
+    { path: 'addedit', component: ProcesoComponent },
+    { path: 'ficha', component: DetalleComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

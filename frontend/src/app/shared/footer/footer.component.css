@@ -1,0 +1,12 @@
+
+#footer{
+	margin-top:10px;
+	padding-top: 10px;
+  border-top:1px solid #eee;
+  background: black;
+	color:white;
+}
+
+#footer p{
+  margin-left: 30px;  
+}
