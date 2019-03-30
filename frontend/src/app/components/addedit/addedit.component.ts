@@ -4,10 +4,9 @@ import { ProcesoService } from '../../services/proceso.service';
 import { NgForm } from '@angular/forms';
 import { Proceso } from '../../models/proceso';
 
-// TODO: Solucionar problema con SweetAlert.
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
-declare var M: any;
+// declare var M: any;
 // const Swal: any = require('sweetalert2');
 
 @Component({
@@ -32,13 +31,13 @@ export class AddeditComponent implements OnInit {
           this.resetForm(form);
           this.getProcesos();
           // M.toast({html: 'Actualización correcta.'});
-          // Swal.fire({
-          //   position: 'top-end',
-          //   type: 'success',
-          //   title: 'Actualización correcta.',
-          //   showConfirmButton: false,
-          //   timer: 1500
-          // });
+          Swal.fire({
+            position: 'top-end',
+            type: 'success',
+            title: 'Actualización correcta.',
+            showConfirmButton: false,
+            timer: 2500
+          });
         });
     } else {
       console.log('Se ha pulsado grabar sin ID. Para añadir.');
@@ -47,13 +46,13 @@ export class AddeditComponent implements OnInit {
           this.resetForm(form);
           this.getProcesos();
       // M.toast({html: 'Guardado correctamente.'});
-      // Swal.fire({
-      //   position: 'top-end',
-      //   type: 'success',
-      //   title: 'Guardado correctamente.',
-      //   showConfirmButton: false,
-      //   timer: 1500
-      // });
+      Swal.fire({
+        position: 'top-end',
+        type: 'success',
+        title: 'Guardado correctamente.',
+        showConfirmButton: false,
+        timer: 1500
+      });
     });
     }
   }

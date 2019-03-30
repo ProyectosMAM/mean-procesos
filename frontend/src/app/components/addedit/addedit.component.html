@@ -58,7 +58,7 @@
           <a (click)="deleteProceso(proceso._id, procesoForm)">
             <i class="material-icons">delete</i>
           </a>
-          <a routerLink="/detalles">
+          <a routerLink="/ficha">
             <i class="material-icons">description</i>
           </a>
         </td>
@@ -103,7 +103,7 @@
               name="office"
               #name="ngModel"
               [(ngModel)]="procesoService.selectedProceso.office"
-              placeholder="    Introduce dato."
+              placeholder="   Introduce dato."
             />
           </div>
           <div class="row d-flex flex-column">
