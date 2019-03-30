@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.nav > li > a.active,
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: #5c8a36;
+  color: #edf0eb
+}
+

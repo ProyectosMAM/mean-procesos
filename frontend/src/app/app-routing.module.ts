@@ -14,7 +14,7 @@ const app_routes: Routes = [
     { path: 'detalles', component: ProcesoDetallesComponent },
     { path: 'addedit', component: ProcesoAddEditComponent },
     { path: 'linea1', component: ProcesosLinea1Component },
-    { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
+    { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({
