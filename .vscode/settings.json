@@ -1,0 +1,29 @@
+{
+  "peacock.favoriteColors": [
+    { "name": "Gatsby Purple", "value": "#639" },
+    { "name": "Auth0 Orange", "value": "#eb5424" },
+    { "name": "Azure Blue", "value": "#007fff" }
+  ],
+
+  "peacock.affectActivityBar": true,
+  "peacock.affectStatusBar": true,
+  "peacock.affectTitleBar": true,
+  "peacock.elementAdjustments": {
+    "activityBar": "lighten"
+  },
+
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#ef7853",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#8af4a3",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#eb5424",
+    "titleBar.inactiveBackground": "#eb542499",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#eb5424",
+    "statusBarItem.hoverBackground": "#ef7853",
+    "statusBar.foreground": "#e7e7e7"
+  }
+}

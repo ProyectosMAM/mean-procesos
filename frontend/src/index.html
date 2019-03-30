@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Procesos LA</title>
-    <base href="/" />
+    <base href="/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -28,40 +28,37 @@
       crossorigin="anonymous"
     />
 
-    <nav style="background-color: coral ">
-      <div class="row">
-        <div class="col-1">
-          <!-- TODO: Cambiar por icono LA. -->
-          <i class="material-icons" style="margin-left: 16px">edit</i>
-        </div>
-        <div class="col-9">
-          <h1 style="margin-left: 16px">Procesos en LA.</h1>
-        </div>
-        <div class="col-2">
-          <button
-            class="btn btn-outline-primary"
-            [routerLink]="['/inicio']"
-            style="margin-right: 16px;"
-          >
-            Listado
-          </button>
-          <button
-            class="btn btn-success"
-            [routerLink]="['/home']"
-            style="margin-right: 16px;"
-          >
-            Inicio
-          </button>
-        </div>
-
-        <!-- <div class="col-sm">
-              One of three columns
-            </div> -->
-      </div>
-    </nav>
+    
   </head>
 
   <body>
+      <div class="container">
+          <img
+            class="center"
+            style="margin-top: 30px; margin-bottom: 30px"
+            src="../assets/img/PodemosMejorar.jpg"
+            alt="Procesos"
+          />
+        
+          <!-- Botones. -->
+          <div class="row justify-content-center">
+            <button
+              class="btn btn-outline-primary"
+              [routerLink]="['inicio']"
+              style="margin-right: 16px;"
+            >
+              Listado
+            </button>
+            <button
+              class="btn btn-success"
+              [routerLink]="['home']"
+              style="margin-right: 16px;"
+            >
+              Inicio
+            </button>
+          </div>
+        </div>
+        
     <!-- MATERIALIZE JAVASCRIPT CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"
     ></script>
@@ -86,5 +83,7 @@
     ></script>
 
     <app-root></app-root>
+   
+    
   </body>
 </html>
