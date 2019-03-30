@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ProcesoComponent } from './components/proceso/proceso.component';
 import { MaestroComponent } from './components/maestro/maestro.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
+import { AddeditComponent } from './components/addedit/addedit.component';
 
 const app_routes: Routes = [
     { path: 'home', component: AppComponent, pathMatch: 'full'},
     { path: 'maestro', component: MaestroComponent },
-    { path: 'addedit', component: ProcesoComponent },
+    // { path: 'addedit', component: ProcesoComponent },
+    { path: 'addedit', component: AddeditComponent },
     { path: 'ficha', component: DetalleComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
