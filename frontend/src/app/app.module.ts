@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AppComponent } from './app.component';
-import { ProcesoComponent } from './components/proceso/proceso.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { MaestroComponent } from './components/maestro/maestro.component';
 import { TablaProcesosComponent } from './shared/tabla-procesos/tabla-procesos.component';
@@ -19,7 +18,6 @@ import { AddeditComponent } from './components/addedit/addedit.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ProcesoComponent,
     DetalleComponent,
     MaestroComponent,
     TablaProcesosComponent,
