@@ -13,10 +13,15 @@ import Swal from 'sweetalert2';
   providers: [ProcesoService]
 })
 export class AddeditComponent implements OnInit {
+  // Aúnque haga Public procesoService marcaba un error en el html (aunque funcionaba)
+  // Para poder usarlas sin problemas en el html se declaran estas dos variables.
+  public procesos: Proceso[];
+  public selectedProceso: Proceso;
   constructor(private procesoService: ProcesoService) {}
 
   ngOnInit() {
     this.getProcesos();
+    this.selectedProceso = this.procesoService.selectedProceso;
   }
 
   addProceso(form?: NgForm) {
@@ -53,12 +58,14 @@ export class AddeditComponent implements OnInit {
 
   getProcesos() {
     this.procesoService.getProcesos().subscribe(res => {
-      this.procesoService.procesos = res as Proceso[];
+      this.procesos = res as Proceso[];
     });
   }
 
   editProceso(proceso: Proceso) {
-    this.procesoService.selectedProceso = proceso;
+    // this.procesoService.selectedProceso = proceso;
+    // al declarar selectedProceso como public hay que cambiar esta linea para que funcione editar.
+    this.selectedProceso = proceso;
   }
 
   deleteProceso(_id: string, form: NgForm) {

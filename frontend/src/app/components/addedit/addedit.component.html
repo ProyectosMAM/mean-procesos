@@ -36,7 +36,7 @@
 </div> -->
 
 <!-- Tabla de datos. -->
-<div class="row col-12">
+<div class="row col-10 offset-1">
   <table class="table table-striped">
     <thead>
       <th>Proceso</th>
@@ -45,8 +45,10 @@
       <th>Estandar</th>
     </thead>
     <tbody>
-      <!-- TODO: Aviso: Identifier 'procesoService' refers to a private member of the component -->
-      <tr *ngFor="let proceso of procesoService.procesos">
+      <!-- Tenia este error Aviso: Identifier 'procesoService' refers to a private member of the component -->
+      <!-- <tr *ngFor="let proceso of procesoService.procesos"> -->
+      <!-- Se corrige declarando procesos como public en addedit.component.ts -->
+      <tr *ngFor="let proceso of procesos">
         <td>{{ proceso.name }}</td>
         <td>{{ proceso.position }}</td>
         <td>{{ proceso.office }}</td>
@@ -71,12 +73,11 @@
 <div class="row card col-6">
   <div class="card-body">
     <form #procesoForm="ngForm">
-      <!-- TODO: procesoService -->
-      <input
+       <input
         type="hidden"
         name="_id"
         #_id="ngModel"
-        [(ngModel)]="procesoService.selectedProceso._id"
+        [(ngModel)]="selectedProceso._id"
       />
       <div>
         <div class="row d-flex flex-column ">
@@ -85,7 +86,7 @@
               type="text"
               name="name"
               #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.name"
+              [(ngModel)]="selectedProceso.name"
               placeholder="Introduce el nombre del proceso."
             />
           </div>
@@ -96,7 +97,7 @@
               type="text"
               name="position"
               #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.position"
+              [(ngModel)]="selectedProceso.position"
               placeholder="   Introduce descripción."
             />
           </div>
@@ -105,7 +106,7 @@
               type="text"
               name="office"
               #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.office"
+              [(ngModel)]="selectedProceso.office"
               placeholder="   Introduce dato."
             />
           </div>
@@ -114,7 +115,7 @@
               type="number"
               name="salary"
               #name="ngModel"
-              [(ngModel)]="procesoService.selectedProceso.salary"
+              [(ngModel)]="selectedProceso.salary"
               placeholder="Introduce tiempo estandar."
             />
           </div>
