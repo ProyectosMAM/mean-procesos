@@ -71,6 +71,7 @@
 <div class="row card col-6">
   <div class="card-body">
     <form #procesoForm="ngForm">
+      <!-- TODO: procesoService -->
       <input
         type="hidden"
         name="_id"
@@ -88,6 +89,8 @@
               placeholder="Introduce el nombre del proceso."
             />
           </div>
+          
+          <!-- En el video (minuto 34:00) pone #position en lugar de #name, igual para el resto de propiedades. -->
           <div class="row d-flex flex-column">
             <input
               type="text"

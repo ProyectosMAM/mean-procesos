@@ -2,7 +2,11 @@ export class Proceso {
 // TODO: Crear campos adecuados.
 // FIXME: Solo para probar los colores.
 
-    constructor(_id = '', name = '', position = '', office = '', salary = 0) {
+// El modelo de dados para la BBDD en MongoDb esta definido en:
+// server\models\proceso.js
+
+// Para crear un proceso por defecto con valores predeterminados.
+constructor(_id = '', name = '', position = '', office = '', salary = 0) {
         this._id = _id;
         this.name = name;
         this.position = position;
@@ -10,6 +14,7 @@ export class Proceso {
         this.salary = salary;
     }
 
+// Esquema de los datos.
     _id: string;
     name: string;
     position: string;
