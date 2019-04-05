@@ -14,6 +14,7 @@ import { TablaProcesosComponent } from './shared/tabla-procesos/tabla-procesos.c
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { AddeditComponent } from './components/addedit/addedit.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AddeditComponent } from './components/addedit/addedit.component';
     TablaProcesosComponent,
     FooterComponent,
     NavbarComponent,
-    AddeditComponent
+    AddeditComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
