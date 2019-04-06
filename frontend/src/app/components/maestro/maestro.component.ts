@@ -10,6 +10,10 @@ import { Proceso } from '../../models/proceso';
   providers: [ProcesoService]
 })
 export class MaestroComponent implements OnInit {
+  // Aúnque haga Public procesoService marcaba un error en el html (aunque funcionaba)
+  // Para poder usarlas sin problemas en el html se declaran esta variable.
+  public procesos: Proceso[];
+
   constructor(private procesoService: ProcesoService) { }
 
   ngOnInit() {

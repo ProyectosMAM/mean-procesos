@@ -3,6 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// Modal
+import { ModalContainerComponent } from './components/modal-container/modal-container.component';
+import { ModalContentComponent } from './components/modal-content/modal-content.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
 
@@ -25,15 +31,19 @@ import { InicioComponent } from './components/inicio/inicio.component';
     FooterComponent,
     NavbarComponent,
     AddeditComponent,
-    InicioComponent
+    InicioComponent,
+    ModalContainerComponent,
+    ModalContentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ ModalContentComponent ]
 })
 export class AppModule { }

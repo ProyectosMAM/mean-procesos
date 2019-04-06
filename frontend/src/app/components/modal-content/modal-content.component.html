@@ -1,0 +1,93 @@
+<div>
+    <h4 class="center">Introducir nuevo proceso.</h4>
+    <!-- <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
+  </div>
+  <!-- <div class="modal-body">
+    <input [(ngModel)]="user.name" type="text">
+    <input [(ngModel)]="user.age" type="number">
+    <button (click)="passBack()" type="submit" class="btn btn-primary w-100">Pass back</button>
+  </div> -->
+  
+<!-- Card para introducir datos. -->
+<!-- <div class="row card"> -->
+    <div class="card-body">
+      <form #procesoForm="ngForm">
+         <input
+          type="hidden"
+          name="_id"
+          #_id="ngModel"
+          [(ngModel)]="selectedProceso._id"
+        />
+        <div>
+          <div class="row d-flex flex-column ">
+            <div class="">
+              <input
+                type="text"
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="selectedProceso.name"
+                placeholder="Introduce el nombre del proceso."
+              />
+            </div>
+            
+            <!-- En el video (minuto 34:00) pone #position en lugar de #name, igual para el resto de propiedades. -->
+            <div class="row d-flex flex-column">
+              <input
+                type="text"
+                name="position"
+                #name="ngModel"
+                [(ngModel)]="selectedProceso.position"
+                placeholder="   Introduce descripción."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="text"
+                name="office"
+                #name="ngModel"
+                [(ngModel)]="selectedProceso.office"
+                placeholder="   Introduce dato."
+              />
+            </div>
+            <div class="row d-flex flex-column">
+              <input
+                type="number"
+                name="salary"
+                #name="ngModel"
+                [(ngModel)]="selectedProceso.salary"
+                placeholder="   Introduce tiempo estandar."
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  <!-- </div> -->
+  
+  <!-- Botones -->
+  <div class="row">
+    <div class="">
+      <button
+        class="btn btn-outline-primary"
+        style="margin-right: 16px;"
+        (click)="resetForm(procesoForm)"
+      >
+        Limpiar
+      </button>
+      <button
+      class="btn btn-outline-warning"
+      style="margin-right: 16px;"
+      (click)="activeModal.dismiss('Cross click')"
+    >
+      Cancelar
+    </button>
+      <button 
+        class="btn btn-outline-success"
+        (click)="addProceso(procesoForm)"
+      >
+        Grabar
+      </button>
+    </div>
+  </div>

@@ -1,40 +1,5 @@
 <div class="container">
-  <!-- Botones Linea 1, Linea 2... -->
-<!-- <div class="container">
-  <div class="row">
-    <div class="">
-      <button
-        class="btn btn-outline-danger"
-        [routerLink]="['/linea1']"
-        style="margin-right: 16px;"
-      >
-        Linea 1
-      </button>
-      <button class="btn btn-outline-primary" style="margin-right: 16px;">
-        Linea 2
-      </button>
-      <button class="btn btn-outline-secondary" style="margin-right: 16px;">
-        Linea 7
-      </button>
-      <button class="btn btn-outline-success" style="margin-right: 16px;">
-        IMAR
-      </button>
-      <button class="btn btn-outline-warning" style="margin-right: 16px;">
-        ULMA
-      </button>
-      <button class="btn btn-outline-secondary" style="margin-right: 16px;">
-        Obrador
-      </button>
-      <button class="btn btn-outline-success" style="margin-right: 16px;">
-        Bodega
-      </button>
-      <button class="btn btn-outline-warning" style="margin-right: 16px;">
-        Almacen
-      </button>
-    </div>
-  </div>
-</div> -->
-
+  
 <!-- Tabla de datos. -->
 <div class="row col-10 offset-1">
   <table class="table table-striped">
@@ -57,7 +22,9 @@
           <a (click)="editProceso(proceso)">
             <i class="material-icons">edit</i>
           </a>
-          <a (click)="deleteProceso(proceso._id, procesoForm)">
+          <!-- <a (click)="deleteProceso(proceso._id, procesoForm)"> -->
+          <a (click)="deleteProceso(proceso._id)">
+
             <i class="material-icons">delete</i>
           </a>
           <a routerLink="/ficha">
@@ -69,90 +36,15 @@
   </table>
 </div>
 
-<!-- Card para introducir datos. -->
-<div class="row card col-6">
-  <div class="card-body">
-    <form #procesoForm="ngForm">
-       <input
-        type="hidden"
-        name="_id"
-        #_id="ngModel"
-        [(ngModel)]="selectedProceso._id"
-      />
-      <div>
-        <div class="row d-flex flex-column ">
-          <div class="">
-            <input
-              type="text"
-              name="name"
-              #name="ngModel"
-              [(ngModel)]="selectedProceso.name"
-              placeholder="Introduce el nombre del proceso."
-            />
-          </div>
-          
-          <!-- En el video (minuto 34:00) pone #position en lugar de #name, igual para el resto de propiedades. -->
-          <div class="row d-flex flex-column">
-            <input
-              type="text"
-              name="position"
-              #name="ngModel"
-              [(ngModel)]="selectedProceso.position"
-              placeholder="   Introduce descripción."
-            />
-          </div>
-          <div class="row d-flex flex-column">
-            <input
-              type="text"
-              name="office"
-              #name="ngModel"
-              [(ngModel)]="selectedProceso.office"
-              placeholder="   Introduce dato."
-            />
-          </div>
-          <div class="row d-flex flex-column">
-            <input
-              type="number"
-              name="salary"
-              #name="ngModel"
-              [(ngModel)]="selectedProceso.salary"
-              placeholder="Introduce tiempo estandar."
-            />
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- Botones Limpiar, Grabar. -->
-<div class="row">
-  <div class="">
-    <button
-      class="btn btn-outline-primary"
-      style="margin-right: 16px;"
-      (click)="resetForm(procesoForm)"
-    >
-      Limpiar
-    </button>
-    <button 
-      class="btn btn-outline-danger"
-      (click)="addProceso(procesoForm)"
-    >
-      Grabar
-    </button>
-  </div>
-</div>
-
 <!-- Añadir. -->
-<!-- <div class="container">
+<div class="container">
   <div class="row justify-content-end">
     <div class="col-2">
-        <button class="btn btn-outline-primary"  [routerLink]="['/addedit']" style="margin-right: 16px;">
-            Añadir
+        <button class="btn btn-outline-primary" (click)="openModal()" style="margin-right: 16px;" >
+          Añadir
           </button>
     </div>
   </div>
 </div>
--->
+
 </div>

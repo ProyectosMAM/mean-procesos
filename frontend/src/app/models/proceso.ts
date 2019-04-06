@@ -6,7 +6,7 @@ export class Proceso {
 // server\models\proceso.js
 
 // Para crear un proceso por defecto con valores predeterminados.
-constructor(_id = '', name = '', position = '', office = '', salary = 0) {
+constructor(_id = '', name = '', position = '', office = '', salary = null) {
         this._id = _id;
         this.name = name;
         this.position = position;

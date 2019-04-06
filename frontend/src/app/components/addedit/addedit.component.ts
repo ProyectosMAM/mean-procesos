@@ -4,6 +4,9 @@ import { ProcesoService } from '../../services/proceso.service';
 import { NgForm } from '@angular/forms';
 import { Proceso } from '../../models/proceso';
 
+import { ModalContentComponent } from '../modal-content/modal-content.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,12 +15,14 @@ import Swal from 'sweetalert2';
   styleUrls: ['./addedit.component.css'],
   providers: [ProcesoService]
 })
+
 export class AddeditComponent implements OnInit {
   // Aúnque haga Public procesoService marcaba un error en el html (aunque funcionaba)
   // Para poder usarlas sin problemas en el html se declaran estas dos variables.
   public procesos: Proceso[];
   public selectedProceso: Proceso;
-  constructor(private procesoService: ProcesoService) {}
+
+  constructor(private procesoService: ProcesoService, public modalService: NgbModal) {}
 
   ngOnInit() {
     this.getProcesos();
@@ -62,13 +67,17 @@ export class AddeditComponent implements OnInit {
     });
   }
 
+  // TODO: Hay que pasar los datos para editar
   editProceso(proceso: Proceso) {
     // this.procesoService.selectedProceso = proceso;
     // al declarar selectedProceso como public hay que cambiar esta linea para que funcione editar.
+    console.log('editar');
     this.selectedProceso = proceso;
   }
 
-  deleteProceso(_id: string, form: NgForm) {
+  // deleteProceso(_id: string, form: NgForm) {
+  deleteProceso(_id: string) {
+
     Swal.fire({
       title: '¿Estas seguro?',
       text: '¡El borrado no se puede deshacer!',
@@ -81,7 +90,7 @@ export class AddeditComponent implements OnInit {
       if (result.value) {
         this.procesoService.deleteProceso(_id).subscribe(res => {
           this.getProcesos();
-          this.resetForm(form);
+          // this.resetForm(form);
         });
         // Swal.fire('¡Borrado!');
         Swal.fire({
@@ -107,4 +116,10 @@ export class AddeditComponent implements OnInit {
       this.getProcesos();
     }
   }
+
+  openModal() {
+    const modalRef = this.modalService.open(ModalContentComponent);
+    // modalRef.componentInstance.user = this.user;
+  }
+
 }

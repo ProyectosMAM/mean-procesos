@@ -10,6 +10,9 @@
       <tbody>
         <!-- TODO: Aviso: Identifier 'procesoService' refers to a private member of the component -->
         <tr *ngFor="let proceso of procesoService.procesos">
+        <!-- Se corrige declarando procesos como public en maestro.component.ts -->
+        <!-- PERO NO SE VEN LOS REGISTROS -->
+        <!-- <tr *ngFor="let proceso of procesos"> -->
           <td>{{ proceso.name }}</td>
           <td>{{ proceso.position }}</td>
           <td>{{ proceso.office }}</td>
