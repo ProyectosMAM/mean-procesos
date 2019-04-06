@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Modal
-import { ModalContainerComponent } from './components/modal-container/modal-container.component';
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -32,7 +31,6 @@ import { InicioComponent } from './components/inicio/inicio.component';
     NavbarComponent,
     AddeditComponent,
     InicioComponent,
-    ModalContainerComponent,
     ModalContentComponent
   ],
   imports: [
